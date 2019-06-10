@@ -48,9 +48,8 @@ def kmp(text, pattern):
             i += 1
             j += 1
         else:
-            if j != -1:
-                j = prefix_table[j]
-            else:
+            j = prefix_table[j]
+            if j == -1:
                 i += 1
                 j += 1
 
