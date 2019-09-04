@@ -2,7 +2,7 @@
 def binary_search(arr, key):
     # 保证有序
     arr = sorted(arr)
-    return binary_search_core_recursive_iterative(arr, key, 0, len(arr))
+    return binary_search_core_iterative(arr, key, 0, len(arr))
 
 
 def binary_search_core_recursive(arr, key, lo, hi):
@@ -20,7 +20,7 @@ def binary_search_core_recursive(arr, key, lo, hi):
         return -1
 
 
-def binary_search_core_recursive_iterative(arr, key, lo, hi):
+def binary_search_core_iterative(arr, key, lo, hi):
     mid = lo + (hi - lo) // 2
     while lo < hi:
         if arr[mid] == key:
