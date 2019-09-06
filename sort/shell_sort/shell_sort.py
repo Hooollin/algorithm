@@ -1,7 +1,8 @@
 def shell_sort(arr):
     d = len(arr) // 2
+    print("initial state: " + str(arr), end="\n\n")
     while d > 0:
-        for i in range(d + 1, len(arr)):
+        for i in range(d, len(arr)):
             if arr[i - d] > arr[i]:
                 t = arr[i]
                 j = i - d
@@ -12,7 +13,7 @@ def shell_sort(arr):
                         break
                     j -= d
                 arr[j + d] = t
-                print(arr)
+                print(str(arr) + " --- d=%d" % d)
                 print_indicator(arr, j + d, i)
         d = d // 2
 
@@ -31,4 +32,4 @@ def print_indicator(arr, i, j):
     print(output_str)
 
 
-shell_sort([1, 2, 3, 5, 6, 1, 2, 4, 2, 23, 5, 6, 2, 5, 3, ])
+shell_sort([6, 7, 7, 7, 7, 7, 7, 7, 7, 4, 2, 23, 5, 6, 2, 5, 3, ])
