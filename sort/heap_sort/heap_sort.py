@@ -23,8 +23,7 @@ def heapify_down(arr, k):
 def heap_sort(arr):
     res = []
     t = arr[0:]
-    _len = len(arr)
-    for i in range(_len):
+    for i in range(len(arr)):
         t = build_max_heap(t)
         res.append(t[0])
         t = t[1:]
