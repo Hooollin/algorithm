@@ -21,21 +21,18 @@ def double_direction_bubble_sort(arr):
     finished = False
     while not finished and front_index < end_index:
         finished = True
-        if (front_index + end_index) % 2 == 0:
-            for i in range(front_index + 1, end_index):
-                if arr[i] < arr[i - 1]:
-                    arr[i], arr[i - 1] = arr[i - 1], arr[i]
-                    finished = False
-            end_index -= 1
-            print(arr)
-        else:
-            for i in range(end_index - 1, front_index, -1):
-                if arr[i] < arr[i - 1]:
-                    arr[i], arr[i - 1] = arr[i - 1], arr[i]
-                    finished = False
-            front_index += 1
-            print(arr)
-    print(arr)
+        for i in range(front_index + 1, end_index):
+            if arr[i] < arr[i - 1]:
+                arr[i], arr[i - 1] = arr[i - 1], arr[i]
+                finished = False
+        end_index -= 1
+        print(arr)
+        for i in range(end_index - 1, front_index, -1):
+            if arr[i] < arr[i - 1]:
+                arr[i], arr[i - 1] = arr[i - 1], arr[i]
+                finished = False
+        front_index += 1
+        print(arr)
 
 
 double_direction_bubble_sort([12, 3, 5, 2, 34, 2, 5, 6, 1, 3])
