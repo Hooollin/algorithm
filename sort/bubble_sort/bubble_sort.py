@@ -4,8 +4,24 @@ def bubble_sort(arr, reverse=False):
         for j in range(i + 1, len(arr)):
             if arr[i] > arr[j]:
                 arr[i], arr[j] = arr[j], arr[i]
+                print_indicator(arr, i, j)
     if reverse:
         reverse_arr(arr)
+
+
+def print_indicator(arr, i, j):
+    print(arr)
+    output_str = " "
+    for idx, num in enumerate(arr):
+        length = len(str(num))
+        if idx != i and idx != j:
+            output_str += " " * length
+        else:
+            output_str += " " * (length // 2)
+            output_str += "^"
+            output_str += " " * (length - length // 2 - 1)
+        output_str += "  "
+    print(output_str)
 
 
 def reverse_arr(arr):
@@ -35,4 +51,4 @@ def double_direction_bubble_sort(arr):
         print(arr)
 
 
-double_direction_bubble_sort([12, 3, 5, 2, 34, 2, 5, 6, 1, 3])
+bubble_sort([12, 3, 5, 2, 34, 2, 5, 6, 1, 3])
