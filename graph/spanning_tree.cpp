@@ -61,7 +61,7 @@ void spanning_tree(int n, vector<vector<pair<int, int>>>& graph){
 	while(!q.empty()){
 		vector<int> now = q.top(); q.pop();
 		int x = now[0], y = now[1], w = now[2];
-		cout << w << endl;
+		//cout << w << endl;
 		if(uni(x, y)){
 			edges.insert({x, y});
 		}
