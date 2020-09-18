@@ -41,7 +41,7 @@ bool uni(int x, int y){
 	return true;
 }
 
-void spanning_tree(int n, vector<vector<pair<int, int>>>& graph){
+void kruskal(int n, vector<vector<pair<int, int>>>& graph){
 	for(int i = 1; i <= n; i++){
 		p[i] = i;
 	}
