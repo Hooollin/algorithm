@@ -1,4 +1,8 @@
-#include <bits/stdc++.h>
+#include <vector>
+#include <set>
+#include <iostream>
+#include <queue>
+
 using namespace std;
 
 /* psudo code
@@ -80,7 +84,7 @@ int main(){
 		graph[x].push_back({y, w});
 		graph[y].push_back({x, w});
 	}
-	spanning_tree(n, graph);
+	kruskal(n, graph);
 	for(auto p : edges){
 		cout << p.first << " " << p.second << endl;
 	}
