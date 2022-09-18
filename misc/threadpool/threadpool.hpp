@@ -88,5 +88,5 @@ ThreadPool::~ThreadPool() {
     worker.join();
   }
 }
-} //namespace ThreadPool
+} //anonymous namespace
 #endif
